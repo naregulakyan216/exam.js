@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exam9.css">
+    <title>Document</title>
+</head>
+<body>
+   <table border="1" class="table">
+  <thead>
+     <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Action</th>
+     </tr>
+  </thead>
+  <tbody id="studentsBody"></tbody>
+   </table>
+    <div id="editModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="body5">
+        <h3 class="new">Edit Students</h3>
+        <div class="grid1">
+        <input type="hidden" id="editStudentIndex">
+        <label class="label">ID:</label><br>
+        <input type="number" id="editId" class="input"><br>
+        <label class="label">First Name:</label><br>
+        <input type="text" id="editFirstName" class="input"><br>
+        <label class="label">Last Name:</label><br>
+        <input type="text" id="editLastName" class="input"><br>
+        <label class="label">Course:</label><br>
+        <input type="number" id="editCourse" class="input"><br>
+        </div>
+        <button onclick="updateStudent()" class="update" >Update Data</button>
+        <button onclick="closeEditModal()"  class="cancel1">Cancel</button>
+    </div>
+</div>
+
+<div id="deleteModal" style="display: none; position: fixed; z-index: 2; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);">
+    <div class="body6">
+        <p class="text">Վստա՞հ եք, որ ցանկանում եք ջնջել ուսանողի տվյալները:</p>
+        <input type="hidden" id="studentIdToDelete">
+        <div class="body7">
+            <button onclick="confirmDelete()" class="delete">Delete</button>
+            <button onclick="closeDeleteModal()" class="cancel2">Cancel</button>
+        </div>
+    </div>
+</div>
+    <button class="Add1">Add</button>
+       <div id="modal" style=" position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="body4">
+        <h3 class="new">Add New Student</h3>
+        <div class="grid">
+        <input type="number" id="userIdadd" placeholder="ID" class="input"><br>
+        <input type="text" id="firstNameadd" placeholder="First Name" class="input"><br>
+        <input type="text" id="lastNameadd" placeholder="Last Name" class="input"><br>
+        <input type="number" id="courseadd" placeholder="Course" class="input"><br>
+        </div>
+        <button id="save" class="save" onclick="saveData()">Save Data</button>
+        <button onclick="closeModal()" class="cancel">Cancel</button>
+    </div>
+</div>
+    <script src="exam9.js"></script>
+</body>
+</html>
