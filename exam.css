@@ -21,3 +21,16 @@
 .buttons{
     margin-left: 550px;
 }
+.player{
+    position: absolute;
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    margin-left: 550px;
+}
+.arrow{
+   margin-left: 600px;
+
+}
