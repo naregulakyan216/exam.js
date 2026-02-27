@@ -6,3 +6,4 @@ button.addEventListener('click',()=>{
      number++;
      text.innerHTML=`Դուք սեղմել եք ${number} անգամ`;
 });
+
